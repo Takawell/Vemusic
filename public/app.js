@@ -12,13 +12,13 @@ window.addEventListener('appinstalled',function(){
     deferredInstallPrompt=null;
     var btn=document.getElementById('pwa-install-btn');
     if(btn)btn.classList.add('hidden');
-    if(typeof showToast==='function')showToast('✅ NanzMusify berhasil diinstall!');
+    if(typeof showToast==='function')showToast('✅ Vemusic berhasil diinstall!');
 });
 function installPWA(){
     if(deferredInstallPrompt){
         deferredInstallPrompt.prompt();
         deferredInstallPrompt.userChoice.then(function(choice){
-            if(choice.outcome==='accepted'&&typeof showToast==='function')showToast('✅ Menginstall NanzMusify...');
+            if(choice.outcome==='accepted'&&typeof showToast==='function')showToast('✅ Menginstall Vemusic...');
             deferredInstallPrompt=null;
             var btn=document.getElementById('pwa-install-btn');
             if(btn)btn.classList.add('hidden');
@@ -69,12 +69,12 @@ var App={
                 <i data-lucide="music" class="w-12 h-12 text-white/60 absolute"></i>
                 <img src="/logo.png" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
             </div>
-            <h1 class="text-3xl font-black chrome-text mb-1">NanzMusify</h1>
+            <h1 class="text-3xl font-black chrome-text mb-1">Vemusic</h1>
             <p class="text-[#b3b3b3] text-sm mb-6">Streaming Musik YouTube dengan Lirik</p>
             
             <div class="glass rounded-2xl p-5 max-w-sm mx-auto space-y-3 text-left mb-6">
                 <h3 class="text-[#cfd3d8] font-bold text-sm uppercase tracking-wider mb-2">📱 Aplikasi</h3>
-                <div class="flex justify-between"><span class="text-[#6b7280] text-sm">Nama</span><span class="text-white font-medium text-sm">NanzMusify</span></div>
+                <div class="flex justify-between"><span class="text-[#6b7280] text-sm">Nama</span><span class="text-white font-medium text-sm">Vemusic</span></div>
                 <div class="flex justify-between"><span class="text-[#6b7280] text-sm">Versi</span><span class="text-white font-medium text-sm">v3.0.0</span></div>
                 <div class="flex justify-between"><span class="text-[#6b7280] text-sm">Framework</span><span class="text-white font-medium text-sm">HTML + Tailwind + JS</span></div>
                 <div class="flex justify-between"><span class="text-[#6b7280] text-sm">Hosting</span><span class="text-white font-medium text-sm">Netlify</span></div>
@@ -156,23 +156,23 @@ var App={
     },
     autoPlayTrack(videoId){
         fetch(API.search+'?query=https://youtube.com/watch?v='+videoId).then(function(r){return r.json();}).then(function(d){
-            var title='Lagu',artist='NanzMusify',cover=videoId?'https://i.ytimg.com/vi/'+videoId+'/hqdefault.jpg':FI,artistId='';
+            var title='Lagu',artist='Vemusic',cover=videoId?'https://i.ytimg.com/vi/'+videoId+'/hqdefault.jpg':FI,artistId='';
             if(d.status&&d.result.songs&&d.result.songs.length>0){var song=d.result.songs[0];title=cn(song.title);artist=cn(song.artist);cover=song.thumbnail||(videoId?'https://i.ytimg.com/vi/'+videoId+'/hqdefault.jpg':FI);artistId=song.artistId||'';}
             S.ct={id:videoId,videoId:videoId,title:title,artist:artist,cover:cover,artistId:artistId,ytUrl:'https://youtube.com/watch?v='+videoId};
             S.ps='direct';S.pl=[S.ct];S.pi=0;UU();MP.show();resetLyricsUI(videoId);
             setTimeout(function(){FullPlayer.open();loadTrack(S.ct);},400);
         }).catch(function(){
-            S.ct={id:videoId,videoId:videoId,title:'Lagu',artist:'NanzMusify',cover:videoId?'https://i.ytimg.com/vi/'+videoId+'/hqdefault.jpg':FI,artistId:'',ytUrl:'https://youtube.com/watch?v='+videoId};
+            S.ct={id:videoId,videoId:videoId,title:'Lagu',artist:'Vemusic',cover:videoId?'https://i.ytimg.com/vi/'+videoId+'/hqdefault.jpg':FI,artistId:'',ytUrl:'https://youtube.com/watch?v='+videoId};
             S.ps='direct';S.pl=[S.ct];S.pi=0;UU();MP.show();resetLyricsUI(videoId);
             setTimeout(function(){FullPlayer.open();loadTrack(S.ct);},400);
         });
     },
     showSharePopup(videoId){
         fetch(API.search+'?query=https://youtube.com/watch?v='+videoId).then(function(r){return r.json();}).then(function(d){
-            var title='Lagu',artist='NanzMusify',cover=videoId?'https://i.ytimg.com/vi/'+videoId+'/hqdefault.jpg':FI;
+            var title='Lagu',artist='Vemusic',cover=videoId?'https://i.ytimg.com/vi/'+videoId+'/hqdefault.jpg':FI;
             if(d.status&&d.result.songs&&d.result.songs.length>0){var song=d.result.songs[0];title=cn(song.title);artist=cn(song.artist);cover=song.thumbnail||(videoId?'https://i.ytimg.com/vi/'+videoId+'/hqdefault.jpg':FI);}
             App.renderPopup(videoId,title,artist,cover);
-        }).catch(function(){App.renderPopup(videoId,'Lagu','NanzMusify',videoId?'https://i.ytimg.com/vi/'+videoId+'/hqdefault.jpg':FI);});
+        }).catch(function(){App.renderPopup(videoId,'Lagu','Vemusic',videoId?'https://i.ytimg.com/vi/'+videoId+'/hqdefault.jpg':FI);});
     },
     renderPopup(videoId,title,artist,cover){
         if(typeof updateOG==='function') updateOG(title, cover, artist);
