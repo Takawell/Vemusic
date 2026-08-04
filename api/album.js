@@ -1,5 +1,5 @@
 const https = require('https');
-const API_KEY = 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8';
+const API_KEY = process.env.YOUTUBE_API_KEY;
 
 function getRunsText(r) { return Array.isArray(r) ? r.map(x=>x.text||'').join('') : ''; }
 
