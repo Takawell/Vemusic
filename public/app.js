@@ -70,23 +70,21 @@ var App={
                 <img src="/logo.png" class="absolute inset-0 w-full h-full object-cover" onerror="this.style.display='none'" />
             </div>
             <h1 class="text-3xl font-black chrome-text mb-1">Vemusic</h1>
-            <p class="text-[#b3b3b3] text-sm mb-6">Streaming Musik YouTube dengan Lirik</p>
+            <p class="text-[#b3b3b3] text-sm mb-6">streaming music with lyrics</p>
             
             <div class="glass rounded-2xl p-5 max-w-sm mx-auto space-y-3 text-left mb-6">
-                <h3 class="text-[#cfd3d8] font-bold text-sm uppercase tracking-wider mb-2">📱 Aplikasi</h3>
+                <h3 class="text-[#cfd3d8] font-bold text-sm uppercase tracking-wider mb-2">Aplikasi</h3>
                 <div class="flex justify-between"><span class="text-[#6b7280] text-sm">Nama</span><span class="text-white font-medium text-sm">Vemusic</span></div>
-                <div class="flex justify-between"><span class="text-[#6b7280] text-sm">Versi</span><span class="text-white font-medium text-sm">v3.0.0</span></div>
-                <div class="flex justify-between"><span class="text-[#6b7280] text-sm">Framework</span><span class="text-white font-medium text-sm">HTML + Tailwind + JS</span></div>
-                <div class="flex justify-between"><span class="text-[#6b7280] text-sm">Hosting</span><span class="text-white font-medium text-sm">Netlify</span></div>
+                <div class="flex justify-between"><span class="text-[#6b7280] text-sm">Versi</span><span class="text-white font-medium text-sm">v1.0.0</span></div>
             </div>
 
             <div class="glass rounded-2xl p-5 max-w-sm mx-auto space-y-3 text-left mb-6">
-                <h3 class="text-[#cfd3d8] font-bold text-sm uppercase tracking-wider mb-2">💻 Developer</h3>
+                <h3 class="text-[#cfd3d8] font-bold text-sm uppercase tracking-wider mb-2">Developer</h3>
                 <div class="flex justify-between items-center">
                     <span class="text-[#6b7280] text-sm">Developed by</span>
                     <div class="flex items-center gap-2">
                         <img src="/dev.png" class="w-6 h-6 rounded-full object-cover border border-white/10" referrerPolicy="no-referrer" onerror="this.src='/logo.png'" />
-                        <span class="text-white font-medium text-sm">Nanzz</span>
+                        <span class="text-white font-medium text-sm">Takawell</span>
                     </div>
                 </div>
             </div>
@@ -95,8 +93,8 @@ var App={
                 <i data-lucide="download" class="w-5 h-5"></i> Install Aplikasi
             </button>
 
-            <a href="https://whatsapp.com/channel/0029Vb8cslf8aKvEpFOaMC0m" target="_blank" class="block w-full max-w-sm mx-auto btn-chrome font-bold py-4 rounded-full active:scale-95 transition-all text-center">
-                💬 Gabung Channel WhatsApp
+            <a href="https://whatsapp.com/channel/0029VbDR5OBAe5VojCURLD2I" target="_blank" class="block w-full max-w-sm mx-auto btn-chrome font-bold py-4 rounded-full active:scale-95 transition-all text-center">
+                 Gabung Channel WhatsApp
             </a>
         </div>`;
         
