@@ -1,0 +1,59 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+  command = "echo 'No build step needed – static site + functions'"
+
+[functions]
+  node_bundler = "esbuild"
+
+# JSON API endpoints -> regular Netlify Functions
+[[redirects]]
+  from = "/api/search"
+  to = "/.netlify/functions/search"
+  status = 200
+
+[[redirects]]
+  from = "/api/lyrics"
+  to = "/.netlify/functions/lyrics"
+  status = 200
+
+[[redirects]]
+  from = "/api/artist"
+  to = "/.netlify/functions/artist"
+  status = 200
+
+[[redirects]]
+  from = "/api/album"
+  to = "/.netlify/functions/album"
+  status = 200
+
+[[redirects]]
+  from = "/api/suggest"
+  to = "/.netlify/functions/suggest"
+  status = 200
+
+[[redirects]]
+  from = "/api/ytplay"
+  to = "/.netlify/functions/ytplay"
+  status = 200
+
+[[redirects]]
+  from = "/api/stream"
+  to = "/.netlify/functions/stream"
+  status = 200
+
+# /api/proxy-audio is handled by an Edge Function (see netlify/edge-functions)
+# so it can stream audio bytes without the ~6MB buffered-response limit that
+# regular serverless functions have, and so Range requests (seeking) work.
+
+# SPA fallback: everything else serves index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "no-store, no-cache, must-revalidate, proxy-revalidate"
+    Pragma = "no-cache"
