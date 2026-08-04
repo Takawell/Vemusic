@@ -1,6 +1,6 @@
 const https = require('https');
 
-const API_KEY = 'AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8';
+const API_KEY = process.env.YOUTUBE_API_KEY;
 
 function getRunsText(runs) { return Array.isArray(runs) ? runs.map(r => r.text || '').join('') : ''; }
 function removeKeysRecursive(obj, keys) {
