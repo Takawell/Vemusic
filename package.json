@@ -1,5 +1,5 @@
 {
-  "name": "nanzmusify",
+  "name": "vemusic",
   "private": true,
   "version": "1.0.0",
   "description": "NanzMusify - Web Music Player (Netlify static site + serverless/edge functions)",
