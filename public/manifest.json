@@ -1,7 +1,7 @@
 {
-  "name": "NanzMusify",
-  "short_name": "NanzMusify",
-  "description": "NanzMusify - Streaming Musik YouTube dengan Lirik",
+  "name": "Vemusic",
+  "short_name": "Vemusic",
+  "description": "Vemusic - Streaming Musik YouTube dengan Lirik",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
