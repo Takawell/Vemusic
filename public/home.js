@@ -2,7 +2,7 @@ var Home={
     render(){
         gid('view-home').innerHTML=`
         <div class="glass-pane border-b border-white/5 pt-12 pb-6 px-4 sticky top-0 z-10">
-            <div class="flex justify-between items-center"><div><h1 class="text-3xl font-black chrome-text">NanzMusify</h1><p class="text-[#b3b3b3] text-xs mt-1">Rekomendasi buat kamu</p></div><div class="flex items-center gap-2"><button onclick="Home.refresh()" class="glass glass-hover rounded-full p-2.5 text-[#b3b3b3] hover:text-white active:scale-90" title="Muat Ulang"><i data-lucide="refresh-cw" class="w-4 h-4"></i></button></div></div>
+            <div class="flex justify-between items-center"><div><h1 class="text-3xl font-black chrome-text">Vemusic</h1><p class="text-[#b3b3b3] text-xs mt-1">Rekomendasi buat kamu</p></div><div class="flex items-center gap-2"><button onclick="Home.refresh()" class="glass glass-hover rounded-full p-2.5 text-[#b3b3b3] hover:text-white active:scale-90" title="Muat Ulang"><i data-lucide="refresh-cw" class="w-4 h-4"></i></button></div></div>
         </div>
         <div class="px-4 space-y-6 mt-4"><div id="home-grid" class="grid grid-cols-2 md:grid-cols-4 gap-3"></div><div><h2 class="text-lg font-bold mb-3">Playlist & Album</h2><div id="home-scroll" class="flex gap-4 overflow-x-auto hide-scrollbar pb-4"></div></div><div><h2 class="text-lg font-bold mb-3">Artis Top</h2><div id="home-artists" class="flex gap-4 overflow-x-auto hide-scrollbar pb-4"></div></div></div>`;
         lucide.createIcons();
